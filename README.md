@@ -2,14 +2,31 @@
 
 ## Requirements
 
-- [X] Set up a new Express project in the provided app.js file.
+- [ ] Set up a new Express project in the provided app.js file.
+## Create the following files
+- [X] A package.json file that includes your project’s dependencies.
+- [ ] A Jade/Pug template file to display tweets and messages
+- [ ] A config.js file that will contain your application’s authentication code
+- [X] A .gitignore file to add your config. js and node_modules/ folder to. This will prevent these files from being committed and pushed to github
 
 
-You will need to create the following files:
-A package.json file that includes your project’s dependencies.
-A Jade/Pug template file to display tweets and messages
-A config.js file that will contain your application’s authentication code
-A .gitignore file to add your config. js and node_modules/ folder to. This will prevent these files from being committed and pushed to github
+- [ ] Create a new Twitter application.
+- [ ] consumer_key
+- [ ] consumer_secret
+- [ ] access_token
+- [ ] access_token_secret
+
+## Make a Pug/Jade template for the main page. The template should have spaces for:
+- [ ] your 5 most recent tweets
+- [ ] your 5 most recent friends
+- [ ] your 5 most recent private messages
+
+## Extra Credit
+- [ ] Add a section to the bottom of your page that allows a user to post a new tweet. The new tweet should display without having to refresh the page.
+- [ ] Add an error page to your application, so that if anything goes wrong with your routes, the user will see a friendly message rendered, instead of the default error code.
+- [ ]Include your personal background image from Twitter as a background for the page header.
+
+
 The following files are provided:
 An app.js file where you will set up your Express app and write your API calls
 An index.html file that provides an example of what the finished project should look like, and some CSS and image files to use with your Jade/Pug template
