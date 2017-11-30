@@ -23,11 +23,11 @@
 
 - [ ] Include personal name and profile image at the top of the screen
 - [ ] Clean-up PUG template data
-- [ ] fix error handling
+- [x] fix error handling
 
 ## Extra Credit
 - [x] Add a section to the bottom of your page that allows a user to post a new tweet. The new tweet should display without having to refresh the page.
-- [ ] Add an error page to your application, so that if anything goes wrong with your routes, the user will see a friendly message rendered, instead of the default error code.
+- [x] Add an error page to your application, so that if anything goes wrong with your routes, the user will see a friendly message rendered, instead of the default error code.
 - [ ] Include your personal background image from Twitter as a background for the page header.
 
 ## Future additions
