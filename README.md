@@ -28,7 +28,7 @@
 ## Extra Credit
 - [x] Add a section to the bottom of your page that allows a user to post a new tweet. The new tweet should display without having to refresh the page.
 - [x] Add an error page to your application, so that if anything goes wrong with your routes, the user will see a friendly message rendered, instead of the default error code.
-- [ ] Include your personal background image from Twitter as a background for the page header.
+- [x] Include your personal background image from Twitter as a background for the page header.
 
 ## Future additions
 - [ ] Add User authentication page 
