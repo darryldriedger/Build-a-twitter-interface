@@ -1,0 +1,39 @@
+
+.err--body {
+  background: url(/static/images/deathStar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+.banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  /*margin-top: -35px;*/
+  z-index: 0;
+}
+.err--text {
+	letter-spacing: 2px;
+	text-align: center;
+}
+.another--avatar img{
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 54px;
+  height: 54px;
+  float: left;
+  margin-top: -15px;
+  margin-left: 0px;
+  overflow: hidden;
+  border-radius: 8px;S
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  -ms-transition: box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+}
+a:hover .another--avatar img{
+  box-shadow: 0 0 0 4px #1da1f2 inset;
+}

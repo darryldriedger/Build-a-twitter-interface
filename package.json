@@ -1,0 +1,30 @@
+{
+  "name": "build-a-twitter-interface",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node app.js "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "latest",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "json2csv": "^3.11.5",
+    "mongodb": "^2.2.33",
+    "nodemon": "^1.12.1",
+    "oauth": "^0.9.15",
+    "pug": "^2.0.0-rc.4",
+    "request": "latest",
+    "twit": "^2.2.9"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
