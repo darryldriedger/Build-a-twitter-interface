@@ -21,7 +21,7 @@
 - [x] your 5 most recent friends
 - [x] your 5 most recent private messages
 
-- [ ] Include personal name and profile image at the top of the screen
+- [x] Include personal name and profile image at the top of the screen
 - [ ] Clean-up PUG template data
 - [x] fix error handling
 
