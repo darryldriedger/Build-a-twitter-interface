@@ -58,6 +58,8 @@ index.html
 views/app/following.pug
 views/app/messages.pug
 views/app/status.pug
+views/app/appBody2.pug
+views/app/layout2.pug
 
 views/hello.pug
 views/tester.pug

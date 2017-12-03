@@ -37,24 +37,24 @@ let followingProm = new Promise(function(resolve, reject) {
     let followingNumber;
     let followLength = 0;
     // console.log(data.users);
-    if(data.users.length < 5){
-      followLength = data.users.length;
-    } else {
-      followLength = 5;
-    }
     if(!err){
-      for(let i=0; i < followLength; i++){
-        let obj = {};
-        obj.name = data.users[i].name;
-				obj.screenName = '@' + data.users[i].screen_name;
-				obj.image = data.users[i].profile_image_url;
-				obj.following = data.users[i].following;
-        following.push(obj);
+      if(data.users.length < 5){
+        followLength = data.users.length;
+      } else {
+        followLength = 5;
       }
-      followingNumber = data.users.length;
-		resolve(following, followingNumber);
+        for(let i=0; i < followLength; i++){
+          let obj = {};
+          obj.name = data.users[i].name;
+  				obj.screenName = '@' + data.users[i].screen_name;
+  				obj.image = data.users[i].profile_image_url;
+  				obj.following = data.users[i].following;
+          following.push(obj);
+        }
+        followingNumber = data.users.length;
+  		resolve(following, followingNumber);
 		} else {
-		reject(err);
+		    reject(err);
 		}
   });
   //code for retreiving the last 5 accounts i have followed -- last 5 followed
@@ -76,18 +76,24 @@ let followingNumProm = new Promise(function(resolve, reject) {
 let messageRecProm = new Promise(function(resolve, reject) {
   //code for retrieving the last 5 direct messages -- Last 5 direct messages
   T.get('direct_messages', { q: "darryldriedger" , count: 5 },  function (err, data, response) {
+    let messageLength;
     if(!err){
-    let messagesReceived = [];
-          for(let i=0; i < data.length; i++){
-          let obj = {};
-          obj.who = "app--message";
-          obj.name = '@' + data[i].sender_screen_name;
-          obj.text = data[i].text;
-          obj.image = data[i].sender.profile_image_url;
-          obj.time = data[i].created_at;
-          messagesReceived.push(obj);
-          }
-    		resolve(messagesReceived);
+      if(data.length < 5){
+        messageLength = data.users.length;
+      } else {
+        messageLength = 5;
+      }
+      let messagesReceived = [];
+            for(let i=0; i < messageLength; i++){
+            let obj = {};
+            obj.who = "app--message";
+            obj.name = '@' + data[i].sender_screen_name;
+            obj.text = data[i].text;
+            obj.image = data[i].sender.profile_image_url;
+            obj.time = data[i].created_at;
+            messagesReceived.push(obj);
+            }
+      		resolve(messagesReceived);
     		} else {
     		reject(err);
     		}
@@ -135,28 +141,6 @@ let messageSenProm = new Promise(function(resolve, reject) {
   };
   //the code for simplifying the retrieval of messages
 
-// //testing authorization code
-// T.getAuth('authenticate', { q: "darryldriedger"},  function (err, data, response) {
-//   // console.log(data);
-// })
-// //testing authorization code
-//
-// // verify credentials ??
-// T.get('account/verify_credentials', { skip_status: true })
-//   .catch(function (err) {
-//     // console.log('caught error', err.stack)
-//   })
-//   .then(function (result) {
-//     // `result` is an Object with keys "data" and "resp".
-//     // `data` and `resp` are the same objects as the ones passed
-//     // to the callback.
-//     // See https://github.com/ttezel/twit#tgetpath-params-callback
-//     // for details.
-//
-//     // console.log('data', result.data);
-//   })
-// // verify credentials ??
-
   // Once all promises are resolved render page
   Promise.all([statusProm, followingProm, messageRecProm, messageSenProm,followingNumProm]).then(function(data) {
     let messengerArr = messenger(data[3], data[2]);
@@ -167,20 +151,12 @@ let messageSenProm = new Promise(function(resolve, reject) {
       following: data[1],
       fnumber: data[4],
       messenger: messengerArr
-    })
+    });
   })
   .catch(function(err) {
   console.log("error");
-  //   res.render('error', {error : 'Oops..Can not get twitter data, something wrong with API Request'})
+    res.render('error', {error : 'Something went wrong with the API ... Twitter data in limbo .. :( '})
   });
 };
-//need to:
-// calculate time from created at and todays date
-// conversation with if statement
-module.exports.twitterData = twitterData;
-// const fuckit = ()=>{
-//   console.log("this si the fuckit!!");
-// };
 
-// module.exports = router;
-// module.exports.fuckit = fuckit;
+module.exports.twitterData = twitterData;

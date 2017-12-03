@@ -12,10 +12,6 @@
   /*margin-top: -35px;*/
   z-index: 0;
 }
-.err--text {
-	letter-spacing: 2px;
-	text-align: center;
-}
 .another--avatar img{
   position: relative;
   background-repeat: no-repeat;
@@ -34,6 +30,7 @@
   -o-transition: box-shadow 0.2s;
   transition: box-shadow 0.2s;
 }
-a:hover .another--avatar img{
-  box-shadow: 0 0 0 4px #1da1f2 inset;
+.err--text {
+	letter-spacing: 2px;
+	text-align: center;
 }
