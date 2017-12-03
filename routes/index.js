@@ -23,13 +23,6 @@ router.get('/', (req, res)=>{
 twitterData(T, req, res);
 });
 
-router.get('/test', (req, res)=>{
-res.render('tester')
-});
-
-router.get('/error', (req, res)=>{
-res.render('error')
-});
 router.post('/post', (req, res)=>{
   let tweet = {
     'status': req.body.tweet_button
