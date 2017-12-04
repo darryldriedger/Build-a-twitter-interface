@@ -22,7 +22,7 @@
 - [x] your 5 most recent private messages
 
 - [x] Include personal name and profile image at the top of the screen
-- [ ] Clean-up PUG template data
+- [x] Clean-up PUG template data
 - [x] fix error handling
 
 ## Extra Credit
