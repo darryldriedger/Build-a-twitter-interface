@@ -55,15 +55,14 @@ js/config.json
 config.json
 config.js
 index.html
-views/app/following.pug
-views/app/messages.pug
-views/app/status.pug
-views/app/appBody2.pug
-views/app/layout2.pug
+
+views/appBody2.pug
+views/layout2.pug
 
 views/hello.pug
 views/tester.pug
 views/sandbox.pug
+views/footer.pug
 
 test/ship_test.js
 test/test.js

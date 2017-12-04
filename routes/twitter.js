@@ -21,7 +21,7 @@ let statusProm = new Promise(function(resolve, reject) {
           obj.fav = data[i].favorite_count;
           statusArray.push(obj);
       } //end of for
-      console.log(statusArray[0]);
+      // console.log(statusArray[0]);
 			resolve(statusArray);
 			} else {
 			reject(err);
